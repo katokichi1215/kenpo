@@ -3,126 +3,126 @@
 time=$(date)
 date=$(</home/mkato/date_list.txt)
 
-#‰ß‹ƒtƒ@ƒCƒ‹íœ
+#éå»ãƒ•ã‚¡ã‚¤ãƒ«å‰Šé™¤
 rm /tmp/*.txt
 
-#ŠÔ‘}“ü
+#æ™‚é–“æŒ¿å…¥
 echo $time > /tmp/result.txt
 echo "-----" >> /tmp/result.txt
 
-#‹ó‚«•”‰®ƒŠƒXƒg“üè
-#ƒgƒXƒ‰ƒu” ªƒrƒI[ƒŒ
+#ç©ºãéƒ¨å±‹ãƒªã‚¹ãƒˆå…¥æ‰‹
+#ãƒˆã‚¹ãƒ©ãƒ–ç®±æ ¹ãƒ“ã‚ªãƒ¼ãƒ¬
 wget -O /tmp/1.txt https://as.its-kenpo.or.jp/apply/empty_new?s=PVVqTjMwRFpwWlNaMUpIZDlrSGR3MVda
 
-#ƒgƒXƒ‰ƒu” ª˜a‘t—Ñ
+#ãƒˆã‚¹ãƒ©ãƒ–ç®±æ ¹å’Œå¥æ—
 wget -O /tmp/2.txt https://as.its-kenpo.or.jp/apply/empty_new?s=PWtUTjMwRFpwWlNaMUpIZDlrSGR3MVda
 
-#ƒgƒXƒ‰ƒu“’‘ò
+#ãƒˆã‚¹ãƒ©ãƒ–æ¹¯æ²¢
 wget -O /tmp/3.txt https://as.its-kenpo.or.jp/apply/empty_new?s=PUFqTjMwRFpwWlNaMUpIZDlrSGR3MVda
 
-#ƒgƒXƒ‰ƒuŠÙRƒ‹ƒA[ƒi
+#ãƒˆã‚¹ãƒ©ãƒ–é¤¨å±±ãƒ«ã‚¢ãƒ¼ãƒŠ
 wget -O /tmp/4.txt https://as.its-kenpo.or.jp/apply/empty_new?s=PUVqTjMwRFpwWlNaMUpIZDlrSGR3MVda
 
-#’†‘òƒ”ƒBƒŒƒbƒW
+#ä¸­æ²¢ãƒ´ã‚£ãƒ¬ãƒƒã‚¸
 #wget -O /tmp/5.txt https://as.its-kenpo.or.jp/apply/empty_new?s=PUlqTjMwRFpwWlNaMUpIZDlrSGR3MVda
 
-#ƒzƒeƒ‹ƒn[ƒ”ƒFƒXƒg“ß{
+#ãƒ›ãƒ†ãƒ«ãƒãƒ¼ãƒ´ã‚§ã‚¹ãƒˆé‚£é ˆ
 #wget -O /tmp/6.txt https://as.its-kenpo.or.jp/apply/empty_new?s=PU1qTjMwRFpwWlNaMUpIZDlrSGR3MVda
 
-#ƒzƒeƒ‹ƒn[ƒ”ƒFƒXƒg”Á”ö
+#ãƒ›ãƒ†ãƒ«ãƒãƒ¼ãƒ´ã‚§ã‚¹ãƒˆæ–‘å°¾
 #wget -O /tmp/7.txt https://as.its-kenpo.or.jp/apply/empty_new?s=PVFqTjMwRFpwWlNaMUpIZDlrSGR3MVda
 
-#ƒuƒ‹[ƒxƒŠ[ƒqƒ‹Ÿ‰Y
+#ãƒ–ãƒ«ãƒ¼ãƒ™ãƒªãƒ¼ãƒ’ãƒ«å‹æµ¦
 #wget -O /tmp/8.txt https://as.its-kenpo.or.jp/apply/empty_new?s=PVVqTjMwRFpwWlNaMUpIZDlrSGR3MVda
 
-#ƒzƒeƒ‹ƒn[ƒ”ƒFƒXƒgˆÉ“Œ
+#ãƒ›ãƒ†ãƒ«ãƒãƒ¼ãƒ´ã‚§ã‚¹ãƒˆä¼Šæ±
 #wget -O /tmp/9.txt https://as.its-kenpo.or.jp/apply/empty_new?s=PVlqTjMwRFpwWlNaMUpIZDlrSGR3MVda
 
-#ƒzƒeƒ‹ƒn[ƒ”ƒFƒXƒg@ƒXƒL[ƒWƒƒƒ€ŸR
+#ãƒ›ãƒ†ãƒ«ãƒãƒ¼ãƒ´ã‚§ã‚¹ãƒˆã€€ã‚¹ã‚­ãƒ¼ã‚¸ãƒ£ãƒ å‹å±±
 #wget -O /tmp/10.txt https://as.its-kenpo.or.jp/apply/empty_new?s=PWNqTjMwRFpwWlNaMUpIZDlrSGR3MVda
 
-#”ú”iƒŒƒCƒNƒI[ƒcƒJ
+#çµç¶ãƒ¬ã‚¤ã‚¯ã‚ªãƒ¼ãƒ„ã‚«
 #wget -O /tmp/11.txt https://as.its-kenpo.or.jp/apply/empty_new?s=PWdqTjMwRFpwWlNaMUpIZDlrSGR3MVda
 
-#ƒzƒeƒ‹“úqƒvƒŠƒ“ƒZƒX‹“s
+#ãƒ›ãƒ†ãƒ«æ—¥èˆªãƒ—ãƒªãƒ³ã‚»ã‚¹äº¬éƒ½
 #wget -O /tmp/12.txt https://as.its-kenpo.or.jp/apply/empty_new?s=PWtqTjMwRFpwWlNaMUpIZDlrSGR3MVda
 
-#ƒzƒeƒ‹ƒn[ƒ”ƒFƒXƒg“ì‹I“c•Ó
+#ãƒ›ãƒ†ãƒ«ãƒãƒ¼ãƒ´ã‚§ã‚¹ãƒˆå—ç´€ç”°è¾º
 #wget -O /tmp/13.txt https://as.its-kenpo.or.jp/apply/empty_new?s=PUF6TjMwRFpwWlNaMUpIZDlrSGR3MVda
 
-#ŠpŠÔ‰·ò@Šâ‰®ŠÙ
+#è§’é–“æ¸©æ³‰ã€€å²©å±‹é¤¨
 #wget -O /tmp/14.txt https://as.its-kenpo.or.jp/apply/empty_new?s=PUV6TjMwRFpwWlNaMUpIZDlrSGR3MVda
 
-#ƒzƒeƒ‹ƒn[ƒ”ƒFƒXƒg‹ŒŒyˆä‘ò
+#ãƒ›ãƒ†ãƒ«ãƒãƒ¼ãƒ´ã‚§ã‚¹ãƒˆæ—§è»½äº•æ²¢
 #wget -O /tmp/15.txt https://as.its-kenpo.or.jp/apply/empty_new?s=PWtUTTQwRFpwWlNaMUpIZDlrSGR3MVda
 
-#ƒzƒeƒ‹ƒn[ƒ”ƒFƒXƒg‹“s‘é•õ
+#ãƒ›ãƒ†ãƒ«ãƒãƒ¼ãƒ´ã‚§ã‚¹ãƒˆäº¬éƒ½é·¹å³¯
 #wget -O /tmp/16.txt https://as.its-kenpo.or.jp/apply/empty_new?s=PUFqTTQwRFpwWlNaMUpIZDlrSGR3MVda
 
-#Œ‹‰Êì¬
+#çµæœä½œæˆ
 {
-echo ƒgƒXƒ‰ƒu” ªƒrƒI[ƒŒ
+echo ãƒˆã‚¹ãƒ©ãƒ–ç®±æ ¹ãƒ“ã‚ªãƒ¼ãƒ¬
 grep -f /home/mkato/date_list.txt /tmp/1.txt | grep -o "....-..-.."
 
 echo "-----"
 
-echo ƒgƒXƒ‰ƒu” ª˜a‘t—Ñ
+echo ãƒˆã‚¹ãƒ©ãƒ–ç®±æ ¹å’Œå¥æ—
 grep -f /home/mkato/date_list.txt /tmp/2.txt | grep -o "....-..-.."
 echo "-----"
 
-echo ƒgƒXƒ‰ƒu“’‘ò
+echo ãƒˆã‚¹ãƒ©ãƒ–æ¹¯æ²¢
 grep -f /home/mkato/date_list.txt /tmp/3.txt | grep -o "....-..-.."
 echo "-----"
 
-echo ƒgƒXƒ‰ƒuŠÙRƒ‹ƒA[ƒi
+echo ãƒˆã‚¹ãƒ©ãƒ–é¤¨å±±ãƒ«ã‚¢ãƒ¼ãƒŠ
 grep -f /home/mkato/date_list.txt /tmp/4.txt | grep -o "....-..-.."
 echo "-----"
 
-#echo ’†‘òƒ”ƒBƒŒƒbƒW
+#echo ä¸­æ²¢ãƒ´ã‚£ãƒ¬ãƒƒã‚¸
 #grep -f /home/mkato/date_list.txt /tmp/5.txt | grep -o "....-..-.."
 echo "-----"
 
-#echo ƒzƒeƒ‹ƒn[ƒ”ƒFƒXƒg“ß{
+#echo ãƒ›ãƒ†ãƒ«ãƒãƒ¼ãƒ´ã‚§ã‚¹ãƒˆé‚£é ˆ
 #grep -f /home/mkato/date_list.txt /tmp/6.txt | grep -o "....-..-.."
 echo "-----"
 
-#echo ƒzƒeƒ‹ƒn[ƒ”ƒFƒXƒg”Á”ö
+#echo ãƒ›ãƒ†ãƒ«ãƒãƒ¼ãƒ´ã‚§ã‚¹ãƒˆæ–‘å°¾
 #grep -f /home/mkato/date_list.txt /tmp/7.txt | grep -o "....-..-.."
 echo "-----"
 
-#echo ƒuƒ‹[ƒxƒŠ[ƒqƒ‹Ÿ‰Y
+#echo ãƒ–ãƒ«ãƒ¼ãƒ™ãƒªãƒ¼ãƒ’ãƒ«å‹æµ¦
 #grep -f /home/mkato/date_list.txt /tmp/8.txt | grep -o "....-..-.."
 echo "-----"
 
-#echo ƒzƒeƒ‹ƒn[ƒ”ƒFƒXƒgˆÉ“Œ
+#echo ãƒ›ãƒ†ãƒ«ãƒãƒ¼ãƒ´ã‚§ã‚¹ãƒˆä¼Šæ±
 #grep -f /home/mkato/date_list.txt /tmp/9.txt | grep -o "....-..-.."
 echo "-----"
 
-#echo ƒzƒeƒ‹ƒn[ƒ”ƒFƒXƒg@ƒXƒL[ƒWƒƒƒ€ŸR
+#echo ãƒ›ãƒ†ãƒ«ãƒãƒ¼ãƒ´ã‚§ã‚¹ãƒˆã€€ã‚¹ã‚­ãƒ¼ã‚¸ãƒ£ãƒ å‹å±±
 #grep -f /home/mkato/date_list.txt /tmp/10.txt | grep -o "....-..-.."
 echo "-----"
 
-#echo ”ú”iƒŒƒCƒNƒI[ƒcƒJ
+#echo çµç¶ãƒ¬ã‚¤ã‚¯ã‚ªãƒ¼ãƒ„ã‚«
 #grep -f /home/mkato/date_list.txt /tmp/11.txt | grep -o "....-..-.."
 echo "-----"
 
-#echo ƒzƒeƒ‹“úqƒvƒŠƒ“ƒZƒX‹“s
+#echo ãƒ›ãƒ†ãƒ«æ—¥èˆªãƒ—ãƒªãƒ³ã‚»ã‚¹äº¬éƒ½
 #grep -f /home/mkato/date_list.txt /tmp/12.txt | grep -o "....-..-.."
 echo "-----"
 
-#echo ƒzƒeƒ‹ƒn[ƒ”ƒFƒXƒg“ì‹I“c•Ó
+#echo ãƒ›ãƒ†ãƒ«ãƒãƒ¼ãƒ´ã‚§ã‚¹ãƒˆå—ç´€ç”°è¾º
 #grep -f /home/mkato/date_list.txt /tmp/13.txt | grep -o "....-..-.."
 echo "-----"
 
-#echo ŠpŠÔ‰·ò@Šâ‰®ŠÙ
+#echo è§’é–“æ¸©æ³‰ã€€å²©å±‹é¤¨
 #grep -f /home/mkato/date_list.txt /tmp/14.txt | grep -o "....-..-.."
 echo "-----"
 
-#echo ƒzƒeƒ‹ƒn[ƒ”ƒFƒXƒg‹ŒŒyˆä‘òR
+#echo ãƒ›ãƒ†ãƒ«ãƒãƒ¼ãƒ´ã‚§ã‚¹ãƒˆæ—§è»½äº•æ²¢å±±
 #grep -f /home/mkato/date_list.txt /tmp/15.txt | grep -o "....-..-.."
 echo "-----"
 
-#echo ƒzƒeƒ‹ƒn[ƒ”ƒFƒXƒg‹“s‘é•õ
+#echo ãƒ›ãƒ†ãƒ«ãƒãƒ¼ãƒ´ã‚§ã‚¹ãƒˆäº¬éƒ½é·¹å³¯
 #grep -f /home/mkato/date_list.txt /tmp/16.txt | grep -o "....-..-.."
 echo "-----"
 } >> /tmp/result.txt
