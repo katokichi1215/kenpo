@@ -1,128 +1,131 @@
 #!/bin/bash
 
+date_list=${1:-$HOME/date_list.txt}
+output_dir=${2:-/tmp}
+temp_dir=$(mktemp -d)
+
 time=$(date)
-date=$(</home/mkato/date_list.txt)
+date=$(<${date_list})
 
-#‰ß‹Žƒtƒ@ƒCƒ‹íœ
-rm /tmp/*.txt
+#æ™‚é–“æŒ¿å…¥
+echo $time > ${temp_dir}/result.txt
+echo "-----" >> ${temp_dir}/result.txt
 
-#ŽžŠÔ‘}“ü
-echo $time > /tmp/result.txt
-echo "-----" >> /tmp/result.txt
+#ç©ºãéƒ¨å±‹ãƒªã‚¹ãƒˆå…¥æ‰‹
+#ãƒˆã‚¹ãƒ©ãƒ–ç®±æ ¹ãƒ“ã‚ªãƒ¼ãƒ¬
+wget -O ${temp_dir}/1.txt https://as.its-kenpo.or.jp/apply/empty_new?s=PVVqTjMwRFpwWlNaMUpIZDlrSGR3MVda
 
-#‹ó‚«•”‰®ƒŠƒXƒg“üŽè
-#ƒgƒXƒ‰ƒu” ªƒrƒI[ƒŒ
-wget -O /tmp/1.txt https://as.its-kenpo.or.jp/apply/empty_new?s=PVVqTjMwRFpwWlNaMUpIZDlrSGR3MVda
+#ãƒˆã‚¹ãƒ©ãƒ–ç®±æ ¹å’Œå¥æž—
+wget -O ${temp_dir}/2.txt https://as.its-kenpo.or.jp/apply/empty_new?s=PWtUTjMwRFpwWlNaMUpIZDlrSGR3MVda
 
-#ƒgƒXƒ‰ƒu” ª˜a‘t—Ñ
-wget -O /tmp/2.txt https://as.its-kenpo.or.jp/apply/empty_new?s=PWtUTjMwRFpwWlNaMUpIZDlrSGR3MVda
+#ãƒˆã‚¹ãƒ©ãƒ–æ¹¯æ²¢
+wget -O ${temp_dir}/3.txt https://as.its-kenpo.or.jp/apply/empty_new?s=PUFqTjMwRFpwWlNaMUpIZDlrSGR3MVda
 
-#ƒgƒXƒ‰ƒu“’‘ò
-wget -O /tmp/3.txt https://as.its-kenpo.or.jp/apply/empty_new?s=PUFqTjMwRFpwWlNaMUpIZDlrSGR3MVda
+#ãƒˆã‚¹ãƒ©ãƒ–é¤¨å±±ãƒ«ã‚¢ãƒ¼ãƒŠ
+wget -O ${temp_dir}/4.txt https://as.its-kenpo.or.jp/apply/empty_new?s=PUVqTjMwRFpwWlNaMUpIZDlrSGR3MVda
 
-#ƒgƒXƒ‰ƒuŠÙŽRƒ‹ƒA[ƒi
-wget -O /tmp/4.txt https://as.its-kenpo.or.jp/apply/empty_new?s=PUVqTjMwRFpwWlNaMUpIZDlrSGR3MVda
+#ä¸­æ²¢ãƒ´ã‚£ãƒ¬ãƒƒã‚¸
+#wget -O ${temp_dir}/5.txt https://as.its-kenpo.or.jp/apply/empty_new?s=PUlqTjMwRFpwWlNaMUpIZDlrSGR3MVda
 
-#’†‘òƒ”ƒBƒŒƒbƒW
-#wget -O /tmp/5.txt https://as.its-kenpo.or.jp/apply/empty_new?s=PUlqTjMwRFpwWlNaMUpIZDlrSGR3MVda
+#ãƒ›ãƒ†ãƒ«ãƒãƒ¼ãƒ´ã‚§ã‚¹ãƒˆé‚£é ˆ
+#wget -O ${temp_dir}/6.txt https://as.its-kenpo.or.jp/apply/empty_new?s=PU1qTjMwRFpwWlNaMUpIZDlrSGR3MVda
 
-#ƒzƒeƒ‹ƒn[ƒ”ƒFƒXƒg“ß{
-#wget -O /tmp/6.txt https://as.its-kenpo.or.jp/apply/empty_new?s=PU1qTjMwRFpwWlNaMUpIZDlrSGR3MVda
+#ãƒ›ãƒ†ãƒ«ãƒãƒ¼ãƒ´ã‚§ã‚¹ãƒˆæ–‘å°¾
+#wget -O ${temp_dir}/7.txt https://as.its-kenpo.or.jp/apply/empty_new?s=PVFqTjMwRFpwWlNaMUpIZDlrSGR3MVda
 
-#ƒzƒeƒ‹ƒn[ƒ”ƒFƒXƒg”Á”ö
-#wget -O /tmp/7.txt https://as.its-kenpo.or.jp/apply/empty_new?s=PVFqTjMwRFpwWlNaMUpIZDlrSGR3MVda
+#ãƒ–ãƒ«ãƒ¼ãƒ™ãƒªãƒ¼ãƒ’ãƒ«å‹æµ¦
+#wget -O ${temp_dir}/8.txt https://as.its-kenpo.or.jp/apply/empty_new?s=PVVqTjMwRFpwWlNaMUpIZDlrSGR3MVda
 
-#ƒuƒ‹[ƒxƒŠ[ƒqƒ‹Ÿ‰Y
-#wget -O /tmp/8.txt https://as.its-kenpo.or.jp/apply/empty_new?s=PVVqTjMwRFpwWlNaMUpIZDlrSGR3MVda
+#ãƒ›ãƒ†ãƒ«ãƒãƒ¼ãƒ´ã‚§ã‚¹ãƒˆä¼Šæ±
+#wget -O ${temp_dir}/9.txt https://as.its-kenpo.or.jp/apply/empty_new?s=PVlqTjMwRFpwWlNaMUpIZDlrSGR3MVda
 
-#ƒzƒeƒ‹ƒn[ƒ”ƒFƒXƒgˆÉ“Œ
-#wget -O /tmp/9.txt https://as.its-kenpo.or.jp/apply/empty_new?s=PVlqTjMwRFpwWlNaMUpIZDlrSGR3MVda
+#ãƒ›ãƒ†ãƒ«ãƒãƒ¼ãƒ´ã‚§ã‚¹ãƒˆã€€ã‚¹ã‚­ãƒ¼ã‚¸ãƒ£ãƒ å‹å±±
+#wget -O ${temp_dir}/10.txt https://as.its-kenpo.or.jp/apply/empty_new?s=PWNqTjMwRFpwWlNaMUpIZDlrSGR3MVda
 
-#ƒzƒeƒ‹ƒn[ƒ”ƒFƒXƒg@ƒXƒL[ƒWƒƒƒ€ŸŽR
-#wget -O /tmp/10.txt https://as.its-kenpo.or.jp/apply/empty_new?s=PWNqTjMwRFpwWlNaMUpIZDlrSGR3MVda
+#çµç¶ãƒ¬ã‚¤ã‚¯ã‚ªãƒ¼ãƒ„ã‚«
+#wget -O ${temp_dir}/11.txt https://as.its-kenpo.or.jp/apply/empty_new?s=PWdqTjMwRFpwWlNaMUpIZDlrSGR3MVda
 
-#”ú”iƒŒƒCƒNƒI[ƒcƒJ
-#wget -O /tmp/11.txt https://as.its-kenpo.or.jp/apply/empty_new?s=PWdqTjMwRFpwWlNaMUpIZDlrSGR3MVda
+#ãƒ›ãƒ†ãƒ«æ—¥èˆªãƒ—ãƒªãƒ³ã‚»ã‚¹äº¬éƒ½
+#wget -O ${temp_dir}/12.txt https://as.its-kenpo.or.jp/apply/empty_new?s=PWtqTjMwRFpwWlNaMUpIZDlrSGR3MVda
 
-#ƒzƒeƒ‹“úqƒvƒŠƒ“ƒZƒX‹ž“s
-#wget -O /tmp/12.txt https://as.its-kenpo.or.jp/apply/empty_new?s=PWtqTjMwRFpwWlNaMUpIZDlrSGR3MVda
+#ãƒ›ãƒ†ãƒ«ãƒãƒ¼ãƒ´ã‚§ã‚¹ãƒˆå—ç´€ç”°è¾º
+#wget -O ${temp_dir}/13.txt https://as.its-kenpo.or.jp/apply/empty_new?s=PUF6TjMwRFpwWlNaMUpIZDlrSGR3MVda
 
-#ƒzƒeƒ‹ƒn[ƒ”ƒFƒXƒg“ì‹I“c•Ó
-#wget -O /tmp/13.txt https://as.its-kenpo.or.jp/apply/empty_new?s=PUF6TjMwRFpwWlNaMUpIZDlrSGR3MVda
+#è§’é–“æ¸©æ³‰ã€€å²©å±‹é¤¨
+#wget -O ${temp_dir}/14.txt https://as.its-kenpo.or.jp/apply/empty_new?s=PUV6TjMwRFpwWlNaMUpIZDlrSGR3MVda
 
-#ŠpŠÔ‰·ò@Šâ‰®ŠÙ
-#wget -O /tmp/14.txt https://as.its-kenpo.or.jp/apply/empty_new?s=PUV6TjMwRFpwWlNaMUpIZDlrSGR3MVda
+#ãƒ›ãƒ†ãƒ«ãƒãƒ¼ãƒ´ã‚§ã‚¹ãƒˆæ—§è»½äº•æ²¢
+#wget -O ${temp_dir}/15.txt https://as.its-kenpo.or.jp/apply/empty_new?s=PWtUTTQwRFpwWlNaMUpIZDlrSGR3MVda
 
-#ƒzƒeƒ‹ƒn[ƒ”ƒFƒXƒg‹ŒŒyˆä‘ò
-#wget -O /tmp/15.txt https://as.its-kenpo.or.jp/apply/empty_new?s=PWtUTTQwRFpwWlNaMUpIZDlrSGR3MVda
+#ãƒ›ãƒ†ãƒ«ãƒãƒ¼ãƒ´ã‚§ã‚¹ãƒˆäº¬éƒ½é·¹å³¯
+#wget -O ${temp_dir}/16.txt https://as.its-kenpo.or.jp/apply/empty_new?s=PUFqTTQwRFpwWlNaMUpIZDlrSGR3MVda
 
-#ƒzƒeƒ‹ƒn[ƒ”ƒFƒXƒg‹ž“s‘é•õ
-#wget -O /tmp/16.txt https://as.its-kenpo.or.jp/apply/empty_new?s=PUFqTTQwRFpwWlNaMUpIZDlrSGR3MVda
-
-#Œ‹‰Êì¬
+#çµæžœä½œæˆ
 {
-echo ƒgƒXƒ‰ƒu” ªƒrƒI[ƒŒ
-grep -f /home/mkato/date_list.txt /tmp/1.txt | grep -o "....-..-.."
+echo ãƒˆã‚¹ãƒ©ãƒ–ç®±æ ¹ãƒ“ã‚ªãƒ¼ãƒ¬
+grep -f ${date_list} ${temp_dir}/1.txt | grep -o "....-..-.."
 
 echo "-----"
 
-echo ƒgƒXƒ‰ƒu” ª˜a‘t—Ñ
-grep -f /home/mkato/date_list.txt /tmp/2.txt | grep -o "....-..-.."
+echo ãƒˆã‚¹ãƒ©ãƒ–ç®±æ ¹å’Œå¥æž—
+grep -f ${date_list} ${temp_dir}/2.txt | grep -o "....-..-.."
 echo "-----"
 
-echo ƒgƒXƒ‰ƒu“’‘ò
-grep -f /home/mkato/date_list.txt /tmp/3.txt | grep -o "....-..-.."
+echo ãƒˆã‚¹ãƒ©ãƒ–æ¹¯æ²¢
+grep -f ${date_list} ${temp_dir}/3.txt | grep -o "....-..-.."
 echo "-----"
 
-echo ƒgƒXƒ‰ƒuŠÙŽRƒ‹ƒA[ƒi
-grep -f /home/mkato/date_list.txt /tmp/4.txt | grep -o "....-..-.."
+echo ãƒˆã‚¹ãƒ©ãƒ–é¤¨å±±ãƒ«ã‚¢ãƒ¼ãƒŠ
+grep -f ${date_list} ${temp_dir}/4.txt | grep -o "....-..-.."
 echo "-----"
 
-#echo ’†‘òƒ”ƒBƒŒƒbƒW
-#grep -f /home/mkato/date_list.txt /tmp/5.txt | grep -o "....-..-.."
+#echo ä¸­æ²¢ãƒ´ã‚£ãƒ¬ãƒƒã‚¸
+#grep -f ${date_list} ${temp_dir}/5.txt | grep -o "....-..-.."
 echo "-----"
 
-#echo ƒzƒeƒ‹ƒn[ƒ”ƒFƒXƒg“ß{
-#grep -f /home/mkato/date_list.txt /tmp/6.txt | grep -o "....-..-.."
+#echo ãƒ›ãƒ†ãƒ«ãƒãƒ¼ãƒ´ã‚§ã‚¹ãƒˆé‚£é ˆ
+#grep -f ${date_list} ${temp_dir}/6.txt | grep -o "....-..-.."
 echo "-----"
 
-#echo ƒzƒeƒ‹ƒn[ƒ”ƒFƒXƒg”Á”ö
-#grep -f /home/mkato/date_list.txt /tmp/7.txt | grep -o "....-..-.."
+#echo ãƒ›ãƒ†ãƒ«ãƒãƒ¼ãƒ´ã‚§ã‚¹ãƒˆæ–‘å°¾
+#grep -f ${date_list} ${temp_dir}/7.txt | grep -o "....-..-.."
 echo "-----"
 
-#echo ƒuƒ‹[ƒxƒŠ[ƒqƒ‹Ÿ‰Y
-#grep -f /home/mkato/date_list.txt /tmp/8.txt | grep -o "....-..-.."
+#echo ãƒ–ãƒ«ãƒ¼ãƒ™ãƒªãƒ¼ãƒ’ãƒ«å‹æµ¦
+#grep -f ${date_list} ${temp_dir}/8.txt | grep -o "....-..-.."
 echo "-----"
 
-#echo ƒzƒeƒ‹ƒn[ƒ”ƒFƒXƒgˆÉ“Œ
-#grep -f /home/mkato/date_list.txt /tmp/9.txt | grep -o "....-..-.."
+#echo ãƒ›ãƒ†ãƒ«ãƒãƒ¼ãƒ´ã‚§ã‚¹ãƒˆä¼Šæ±
+#grep -f ${date_list} ${temp_dir}/9.txt | grep -o "....-..-.."
 echo "-----"
 
-#echo ƒzƒeƒ‹ƒn[ƒ”ƒFƒXƒg@ƒXƒL[ƒWƒƒƒ€ŸŽR
-#grep -f /home/mkato/date_list.txt /tmp/10.txt | grep -o "....-..-.."
+#echo ãƒ›ãƒ†ãƒ«ãƒãƒ¼ãƒ´ã‚§ã‚¹ãƒˆã€€ã‚¹ã‚­ãƒ¼ã‚¸ãƒ£ãƒ å‹å±±
+#grep -f ${date_list} ${temp_dir}/10.txt | grep -o "....-..-.."
 echo "-----"
 
-#echo ”ú”iƒŒƒCƒNƒI[ƒcƒJ
-#grep -f /home/mkato/date_list.txt /tmp/11.txt | grep -o "....-..-.."
+#echo çµç¶ãƒ¬ã‚¤ã‚¯ã‚ªãƒ¼ãƒ„ã‚«
+#grep -f ${date_list} ${temp_dir}/11.txt | grep -o "....-..-.."
 echo "-----"
 
-#echo ƒzƒeƒ‹“úqƒvƒŠƒ“ƒZƒX‹ž“s
-#grep -f /home/mkato/date_list.txt /tmp/12.txt | grep -o "....-..-.."
+#echo ãƒ›ãƒ†ãƒ«æ—¥èˆªãƒ—ãƒªãƒ³ã‚»ã‚¹äº¬éƒ½
+#grep -f ${date_list} ${temp_dir}/12.txt | grep -o "....-..-.."
 echo "-----"
 
-#echo ƒzƒeƒ‹ƒn[ƒ”ƒFƒXƒg“ì‹I“c•Ó
-#grep -f /home/mkato/date_list.txt /tmp/13.txt | grep -o "....-..-.."
+#echo ãƒ›ãƒ†ãƒ«ãƒãƒ¼ãƒ´ã‚§ã‚¹ãƒˆå—ç´€ç”°è¾º
+#grep -f ${date_list} ${temp_dir}/13.txt | grep -o "....-..-.."
 echo "-----"
 
-#echo ŠpŠÔ‰·ò@Šâ‰®ŠÙ
-#grep -f /home/mkato/date_list.txt /tmp/14.txt | grep -o "....-..-.."
+#echo è§’é–“æ¸©æ³‰ã€€å²©å±‹é¤¨
+#grep -f ${date_list} ${temp_dir}/14.txt | grep -o "....-..-.."
 echo "-----"
 
-#echo ƒzƒeƒ‹ƒn[ƒ”ƒFƒXƒg‹ŒŒyˆä‘òŽR
-#grep -f /home/mkato/date_list.txt /tmp/15.txt | grep -o "....-..-.."
+#echo ãƒ›ãƒ†ãƒ«ãƒãƒ¼ãƒ´ã‚§ã‚¹ãƒˆæ—§è»½äº•æ²¢å±±
+#grep -f ${date_list} ${temp_dir}/15.txt | grep -o "....-..-.."
 echo "-----"
 
-#echo ƒzƒeƒ‹ƒn[ƒ”ƒFƒXƒg‹ž“s‘é•õ
-#grep -f /home/mkato/date_list.txt /tmp/16.txt | grep -o "....-..-.."
+#echo ãƒ›ãƒ†ãƒ«ãƒãƒ¼ãƒ´ã‚§ã‚¹ãƒˆäº¬éƒ½é·¹å³¯
+#grep -f ${date_list} ${temp_dir}/16.txt | grep -o "....-..-.."
 echo "-----"
-} >> /tmp/result.txt
+} >> ${temp_dir}/result.txt
+
+mv ${temp_dir}/result.txt ${output_dir}/result.txt
